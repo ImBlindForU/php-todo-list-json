@@ -8,12 +8,13 @@ $tasks = json_decode($string, true);
 if (isset($_POST["newTask"])) {
     // Siamo nel caso di salvataggio del nuovo dato
     $new_task = $_POST["newTask"];
-    
-    echo $new_task;
+   
     $newtask = [
         "text" => $new_task,
         "done" => false
     ];
     $tasks[]= $newtask;
+    file_put_contents("todo.json", json_encode($tasks));
+     echo $new_task;
 };
 header("content-type: application/json");
