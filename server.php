@@ -15,6 +15,7 @@ if (isset($_POST["newTask"])) {
     ];
     $tasks[]= $newtask;
     file_put_contents("todo.json", json_encode($tasks));
-     echo $new_task;
+     
 };
 header("content-type: application/json");
+echo json_encode($tasks);
