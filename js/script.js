@@ -24,6 +24,7 @@ createApp({
             })
             .then((resp) => {
               this.todoslist = resp.data;
+              this.newTask = ""
             });
     }
 

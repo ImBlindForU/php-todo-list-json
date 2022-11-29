@@ -2,7 +2,6 @@
 
 // prendo i dati e li stampo
 $string= file_get_contents("todo.json");
-echo $string;
 $tasks = json_decode($string, true);
 // invio dati
 if (isset($_POST["newTask"])) {
